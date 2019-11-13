@@ -19,15 +19,7 @@ namespace WindowAndUserControlWPF.UI
 
         private void GetMovies_Click(object sender, RoutedEventArgs e)
         {
-            using (var context = new MasterMovieDbContext())
-            {
-                IEnumerable<Movie> movieList = context.GetAllMovies();
-
-                foreach (var item in movieList)
-                {
-                    Console.WriteLine($"{item.Id}, {item.Name}, {item.DateReleased}, {item.GenreId}");
-                }
-            }
+            
         }
     }
 }

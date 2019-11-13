@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\mikel\source\repos\WindowAndUserControlWPF\WindowsAndUserControl.DataAccess\MoviesModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\mikel\source\repos\WindowAndUserControl\WindowsAndUserControl.DataAccess\MoviesModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -176,7 +176,7 @@
             <End Role="Actors" EntitySet="Actors" />
             <End Role="Movies" EntitySet="Movies1" />
           </AssociationSet>
-          <FunctionImport Name="GetAllMovies" EntitySet="Movies1" ReturnType="Collection(MasterMovieCollectionModel.Movie)" />
+          <FunctionImport Name="GetAllMovies" ReturnType="Collection(MasterMovieCollectionModel.GetAllMovies_Result)" />
         </EntityContainer>
         <ComplexType Name="GetAllMovies_Result">
           <Property Type="Int32" Name="Id" Nullable="false" />
@@ -238,6 +238,14 @@
             </EndProperty>
           </AssociationSetMapping>
           <FunctionImportMapping FunctionImportName="GetAllMovies" FunctionName="MasterMovieCollectionModel.Store.GetAllMovies">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MasterMovieCollectionModel.GetAllMovies_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DateReleased" ColumnName="DateReleased" />
+                <ScalarProperty Name="GenreId" ColumnName="GenreId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
           </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>

@@ -32,14 +32,9 @@ namespace WindowsAndUserControl.DataAccess
         public virtual DbSet<Movie> Movies1 { get; set; }
         public virtual DbSet<User> Users { get; set; }
     
-        public virtual ObjectResult<Movie> GetAllMovies()
+        public virtual ObjectResult<GetAllMovies_Result> GetAllMovies()
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Movie>("GetAllMovies");
-        }
-    
-        public virtual ObjectResult<Movie> GetAllMovies(MergeOption mergeOption)
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Movie>("GetAllMovies", mergeOption);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetAllMovies_Result>("GetAllMovies");
         }
     }
 }
